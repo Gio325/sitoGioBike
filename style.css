@@ -16,6 +16,7 @@ body {
 html {
   font-size: 62.5%;
   font-family: 'Anton', sans-serif;
+    scroll-behavior: smooth;
 }
 
 li {
@@ -31,7 +32,7 @@ a {
   position: sticky;
   top: 0;
   overflow: hidden;
-    z-index: 1000; /* make sure it's higher than cards */
+  z-index: 1000;
 }
 
 .navbar {
@@ -88,7 +89,7 @@ a {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 12rem;
+    top: 8rem;
     flex-direction: column;
     /* background-color: #fff; */
     background-color: #222;
@@ -133,7 +134,8 @@ a {
     justify-content: space-between;
     height: 10vh;
   }
-  .navbar img{
+
+  .navbar img {
     height: 60px;
     width: 60px;
   }
@@ -154,7 +156,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 50vh;
+  height: 50vh;
 }
 
 .hero h1,
@@ -190,6 +192,11 @@ button:hover {
   transition: ease .3s;
 }
 
+@media only screen and (max-width: 480px) {
+.hero{
+  height: 35vh;
+}
+}
 /*sezione catalogo*/
 .catalogo {
   display: flex;
@@ -237,22 +244,22 @@ button:hover {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     background-image: url(imgs/catalogoLandscape.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 50vh;
+    min-height: 35vh;
   }
 
   .catalogo img {
-    width: 250px;
+    width: 180px;
     height: auto;
     border-radius: 20px;
     border: solid black 3px;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-
+    margin-top: 8px;
   }
 
 }
@@ -307,7 +314,7 @@ button:hover {
 .service p {
   font-size: 1.5em;
   font-weight: 300;
-  color: f4f4f4;
+  color: #f4f4f4;
 }
 
 .service img {
@@ -318,12 +325,18 @@ button:hover {
 }
 
 @media only screen and (max-width: 480px) {
+  .services{
+    margin-top: 15px;
+  }
+
 
   .services-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
+    padding: 15px 10px 15px 10px;
   }
 }
 
@@ -380,25 +393,39 @@ button:hover {
 .contact-info a {
   color: #00ff00;
 }
-.social{
+
+.social {
   display: flex;
   gap: 10px;
 }
-.social img{
+
+.social img {
   max-width: 50px;
   max-height: 50px;
 }
-.social img:hover{
-    transform: scale(1.05);
+
+.social img:hover {
+  transform: scale(1.05);
 }
 
 @media only screen and (max-width: 480px) {
   .contact-wrapper {
     display: flex;
     flex-direction: column;
-
+    padding: 30px 15px 30px 15px;
   }
 
+.contact-info h3 {
+  font-size: 2.5em;
+  color: #e0e0e0;
+  font-weight: 500
+}
+
+.contact-info p {
+  font-size: 1.5em;
+  color: #e0e0e0;
+  font-weight: 500;
+}
   .contact-panel {
     padding: 20px;
   }
@@ -410,10 +437,16 @@ button:hover {
 
 /* footer*/
 
-footer{
-  margin: 30px 0px 0px 0px;
+footer {
+  margin-top: 30px;
   text-align: center;
   padding: 20px;
   background-color: #222;
   color: #e0e0e0;
-} 
+}
+
+@media only screen and (max-width: 480px) {
+footer{
+  margin-top: 15px;
+}
+}
