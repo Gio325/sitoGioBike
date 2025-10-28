@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chi Siamo - Giovinazzo Biciclette</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="./imgs/siteIcon.ico" />
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="./imgs/giovinazzo biciclette.png" alt="logo Giovinazzo Biciclette" class="responsive-img">
+  </div>
+  <nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html" class="active">Chi siamo</a></li>
+      <li><a href="#bikes">Bici</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="about-hero">
+  <div class="hero-content">
+    <h1>La nostra storia, la tua passione</h1>
+    <p>Da oltre 50 anni viviamo e respiriamo il mondo delle due ruote.</p>
+  </div>
+</section>
+
+<!-- ABOUT SECTIONS -->
+<section class="about-section">
+  <div class="about-text">
+    <h2>Le nostre origini</h2>
+    <p>
+      Il nostro viaggio nel mondo delle biciclette comincia oltre 50 anni fa, quando tutto veniva costruito a mano, con cura e dedizione.
+Telai, verniciature e assemblaggi erano il frutto di un lavoro artigianale autentico, nato dalla passione per la meccanica e la libertà su due ruote.
+Nel tempo, questa passione è diventata un marchio di fiducia per chi cerca competenza, affidabilità e qualità italiana.
+    </p>
+  </div>
+  <div class="about-img">
+    <img src="./imgs/bici ph.png" alt="Negozio Giovinazzo Biciclette">
+  </div>
+</section>
+
+<section class="about-section">
+  
+  <div class="about-text">
+    <h2>Passione e competenza </h2>
+    <p>
+      Nella nostra officina offriamo servizi per ogni esigenza, dalla semplice sostituzione della camera d’aria alla realizzazione completa di biciclette personalizzate.
+Ogni riparazione, controllo o montaggio viene eseguito con attenzione ai dettagli, perché ogni bici merita di essere perfetta.
+Mettiamo a disposizione anche una vasta gamma di ricambi e accessori di ogni tipo, sempre a prezzi di fabbrica, per garantire la massima convenienza senza rinunciare alla qualità.
+    </p>
+    <div class="about-img">
+    <img src="./imgs/bici ph.png" alt="Officina e assistenza biciclette">
+  </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-text">
+    <h2>Qualità e innovazione</h2>
+    <p>
+      Siamo rivenditori esclusivi dei marchi Montana, Vektor e VKT, e proponiamo una selezione di biciclette ed E-Bike progettate per ogni stile di guida.
+Nel nostro punto vendita troverai MTB, bici da corsa, CTB/Trekking, bici da passeggio, bici per bambini e tandem.
+Unendo tradizione artigianale e tecnologia moderna, offriamo biciclette che rappresentano il perfetto equilibrio tra prestazioni, comfort e design.
+    </p>
+  </div>
+  <div class="about-img">
+    <img src="./imgs/bici ph.png" alt="Missione di Giovinazzo Biciclette">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <p>&copy; 1970 - 2025 Giovinazzo Biciclette</p>
+
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

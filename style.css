@@ -1,0 +1,380 @@
+/* css to reset all the designs */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background: #f4f4f4;
+  color: #222;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Anton', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+}
+
+.navbar img {
+  max-width: 100px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /* background-color: #101010; */
+  background-color: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  transition: all .3s ease;
+}
+
+.nav-link:hover {
+  color: lime;
+    transition: all .3s ease;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 12rem;
+    flex-direction: column;
+    /* background-color: #fff; */
+    background-color: #222;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+      0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-link {
+    color: #fff;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+}
+
+/* hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 4em;
+
+  background-image: url('imgs/banner sito.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.hero h1,
+.hero p {
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero p {
+  font-size: 1.5em;
+}
+
+button {
+  padding: 16px;
+  font-size: 1.5em;
+  border: solid black 1px;
+  border-radius: 10px;
+  background-color: hsla(120, 100%, 50%, 0.700);
+  font-weight: bold;
+  cursor: pointer;
+  transition: ease .3s;
+
+}
+
+button:hover {
+  background-color: hsla(120, 100%, 50%);
+  transition: ease .3s;
+}
+
+/*sezione catalogo*/
+.catalogo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin-top: 30px;
+  background-image: url(imgs/catalogoLandscape.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.catalogo img {
+  border-radius: 20px;
+  border: solid black 3px;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  transition: all ease .3s;
+}
+.catalogo img:hover{
+    transform: translateY(-5px) translateX(-5px);
+    
+}
+
+.textCatalogo {
+  text-align: center;
+  gap: 10px;
+
+}
+
+.textCatalogo h2 {
+  font-size: 3em;
+  margin-bottom: 8px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  color: white;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 480px) {
+  .catalogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-image: url(imgs/catalogoLandscape.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .catalogo img {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    border: solid black 3px;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+  }
+
+}
+
+/*sezione servizi*/
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.services h2 {
+  font-size: 3.5em;
+  
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px 40px 20px;
+}
+
+
+.service {
+  flex: 1 1 250px;
+  max-width:350px ;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+  border: 1px solid #00ff00;
+  transition: all 0.3s ease;
+
+}
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  border-color: #00ff00;
+}
+
+.service h3 {
+  font-size: 2.5em;
+  font-weight: 500;
+  color: lime;
+}
+
+.service p {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: f4f4f4;
+}
+
+.service img {
+  margin-top: 10px;
+  height: 200px;
+  width: auto;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+  
+  .services-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
+
+/*sezione contatti*/
+
+.contact-panel{
+text-align: center;
+}
+.contact-panel p{
+  margin-bottom: 20px;
+}
+.contact-panel h2{
+font-size: 3.5em;
+}
+
+.contact-panel p{
+  font-size: 1.5em;
+}
+.contact-wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2b2b2b;
+  border:solid #00ff00 1px;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 30px 60px 30px;
+
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info h3{
+font-size: 3em;
+color: #e0e0e0;
+font-weight:500
+}
+.contact-info p{
+font-size: 2em;
+color: #e0e0e0;
+font-weight: 500;
+}
+.contact-info a{
+  color: #00ff00;
+}
+
+@media only screen and (max-width: 480px) {
+  .contact-wrapper{
+  display: flex;
+    flex-direction: column;
+
+}
+.contact-panel{
+  padding: 20px;
+}
+iframe{
+display: none;
+}
+}
