@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="./imgs/siteIcon.ico" />
 </head>
 
-<body>
+<body id="catalogoBody">
 <header class="header">
     <nav class="navbar">
       <img src="imgs/giovinazzo biciclette.png" alt="Giovinazzo bicilette Logo">
@@ -34,12 +34,23 @@
       </div>
     </nav>
   </header>
+<main>
+<iframe src="./imgs/catalogo-montana.pdf"  >
+  <p>Non riesci a visualizzare il PDF? <a href="documento.pdf#zoom=100">Scaricalo qui</a>.</p>
+</iframe>
+<div class="mobile">
+  <h1>Catalogo Biciclette</h1>
+  <img src="imgs/Catalogo.png" alt="catalogo Montana 2025-2026">
+  <a href="imgs/catalogo-montana.pdf" download=""> <button><img src="imgs/download icon.png" alt="">Scarica il catalogo PDF</button></a>
+</div>
+</main>
+  <footer>
+    <div class="footer-content">
+      <p>&copy;2025 Giovinazzo Biciclette</p>
+      <p>P.IVA 01234567890</p>
 
-<object data="./imgs/catalogo-montana.pdf" type="application/pdf" width="100%" height="600px">
-  <p>Non riesci a visualizzare il PDF? <a href="documento.pdf">Scaricalo qui</a>.</p>
-</object>
-
-
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
