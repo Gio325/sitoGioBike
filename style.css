@@ -612,9 +612,5 @@ main{
     font-size: 3em;
     font-weight: 500;
   }
-button img{
-max-width: 30px;
-max-height: 30px;
-}
 
 }
