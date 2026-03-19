@@ -75,7 +75,47 @@
   <!-- responsive navbar -->
   <header class="header">
     <nav class="navbar">
-      <img src="imgs/giovinazzo biciclette.webp" alt="Logo Giovinazzo bicilette Nichelino">
+      <!-- INIZIO NUOVO LOGO SVG MIGLIORATO -->
+      <a href="./index.html" class="logo-wrapper" title="Giovinazzo Biciclette - Home">
+          <!-- 1. Icona (G + Ruota / Ingranaggio / Energia) -->
+          <div class="svg-icon-container">
+              <!-- Imposta width e height per la dimensione visibile e viewBox per le coordinate interne -->
+              <svg 
+                   width="40" 
+                   height="40" 
+                   viewBox="0 0 100 100" 
+                   fill="none" 
+                   xmlns="http://www.w3.org/2000/svg">
+                  
+                  <!-- Anello esterno robusto (Solidità della ruota) -->
+                  <circle cx="50" cy="50" r="45" stroke="var(--color-primary)" stroke-width="5" fill="none"/>
+                  
+                  <!-- Asse centrale, stilizzato come un fulmine o energia (e-bike/modernità) -->
+                  <path 
+                      d="M 50 15 L 50 85" 
+                      stroke="var(--color-accent)" 
+                      stroke-width="12" 
+                      stroke-linecap="round"
+                      filter="url(#glow)"
+                  />
+                  
+                  <!-- Dettagli ingranaggio (Artigianalità / Meccanica) -->
+                  <circle cx="50" cy="50" r="30" stroke="var(--color-primary)" stroke-width="2" fill="none" opacity="0.4"/>
+                  
+                  <!-- Nucleo/Mozzo e Lettera 'G' -->
+                  <circle cx="50" cy="50" r="18" fill="var(--color-accent)"/>
+                  <text x="50" y="50" class="logo-g-letter">G</text>
+                  
+              </svg>
+          </div>
+
+          <!-- 2. Logotipo (Giovinazzo Biciclette) -->
+          <div class="brand-identity">
+              <span class="text-giovinazzo">GIOVINAZZO</span>
+              <span class="text-biciclette">BICICLETTE</span>
+          </div>
+      </a>
+      <!-- FINE NUOVO LOGO SVG -->
       <ul class="nav-menu">
         <li class="nav-item">
           <a href="./index.html" class="nav-link">Home</a>
@@ -227,8 +267,8 @@
             <h3>Orari di Apertura</h3>
             <p>
               Lunedì – Venerdì:<br>
-              09:00 – 12:30 | 15:00 – 19:00<br>
-              Sabato:<br>09:00 – 12:30<br>
+              09:00 – 12:30 | 15:30 – 19:30<br>
+              Sabato:<br>09:00 – 12:30 | 15:30 – 19:30<br>
               Domenica:<br>Chiuso
             </p>
           </div>
