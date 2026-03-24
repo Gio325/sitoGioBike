@@ -1,22 +1,18 @@
+
 /* ========================================================
    1. VARIABLES & CONFIG
    Fonte unica di verità per il design system.
    ======================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 /* NUOVO: Importa INTER per il corpo del testo (alta leggibilità) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-
 :root {
   /* Palette */
-  --color-primary: #00ff00;
-  /* Lime */
-  --color-primary-dark: #009900;
-  /* Ombre */
+  --color-primary: #00ff00;       /* Lime */
+  --color-primary-dark: #009900;  /* Ombre */
   --color-bg-body: #f4f4f4;
-  --color-bg-dark: #222;
-  /* Header/Footer/Buttons */
-  --color-bg-card: #2b2b2b;
-  /* Card background */
+  --color-bg-dark: #222;          /* Header/Footer/Buttons */
+  --color-bg-card: #2b2b2b;       /* Card background */
   --color-text-main: #222;
   --color-text-light: #e0e0e0;
   --color-text-white: #fff;
@@ -27,63 +23,15 @@
   --max-width: 1400px;
   --border-radius: 20px;
   --container-padding: 2rem;
-
+  
   /* Typography */
-  --font-main: 'Anton', sans-serif;
-  /* Usato SOLO per Titoli */
-  --font-body: 'Inter', sans-serif;
-  /* Usato per Corpo del testo (leggibilità) */
-
+  --font-main: 'Anton', sans-serif; /* Usato SOLO per Titoli */
+  --font-body: 'Inter', sans-serif; /* Usato per Corpo del testo (leggibilità) */
+  
   /* Transitions */
   --transition-fast: 0.15s ease-out;
   --transition-normal: 0.3s ease-in-out;
 }
-/* logo */
-/* Stile per il wrapper del logo (Icona + Testo) */
-    .logo-wrapper {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: var(--color-primary);
-        gap: 8px; /* Spazio tra icona e testo */
-        padding: 30px;
-    }
-
-    /* Stile per l'icona SVG */
-    .svg-icon-container {
-        width: 40px; /* Dimensione fissa dell'icona SVG */
-        height: 40px;
-        min-width: 40px; /* Previene la riduzione su schermi piccoli */
-    }
-
-    /* Stile per il testo del brand */
-    .brand-identity {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.1; /* Riduce lo spazio tra le righe */
-    }
-
-    .text-giovinazzo {
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 0.05em; /* Leggero aumento della spaziatura */
-        color: var(--color-primary);
-    }
-
-    .text-biciclette {
-        font-size:1.8rem;
-        font-weight: 400;
-        color: #6B7280; /* Grigio più chiaro per il sottotitolo */
-    }
-    
-    /* Stile specifico per la G all'interno dell'SVG */
-    .logo-g-letter {
-        font-size: 60px; /* Dimensione della G all'interno di viewBox 100x100 */
-        font-weight: 900;
-        text-anchor: middle;
-        dominant-baseline: central;
-        fill: var(--color-primary); /* Colore primario per la lettera */
-    }
 
 /* ========================================================
    2. RESET & BASE
@@ -98,13 +46,11 @@
 }
 
 html {
-  font-size: 62.5%;
-  /* 1rem = 10px */
+  font-size: 62.5%; /* 1rem = 10px */
   /* USA INTER COME FONT DI BASE PER LA LEGGIBILITÀ */
-  font-family: var(--font-body);
+  font-family: var(--font-body); 
   scroll-behavior: smooth;
-  height: 100%;
-  /* Il genitore deve occupare l'intera altezza */
+  height: 100%; /* Il genitore deve occupare l'intera altezza */
 }
 
 body {
@@ -112,52 +58,31 @@ body {
   color: var(--color-text-main);
   font-size: 1.6rem;
   line-height: 1.5;
-  overflow-x: hidden;
-  /* Previene scroll orizzontale indesiderato */
-
+  overflow-x: hidden; /* Previene scroll orizzontale indesiderato */
+  
   /* REGOLE PER FOOTER STICKY */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  /* Forza il body ad essere alto almeno quanto la viewport */
+  min-height: 100vh; /* Forza il body ad essere alto almeno quanto la viewport */
 }
 
 main {
-  flex-grow: 1;
-  /* Permette al main di espandersi e spingere il footer in basso */
+    flex-grow: 1; /* Permette al main di espandersi e spingere il footer in basso */
 }
 
 /* APPLICA ANTON SOLO AI TITOLI */
-h1,
-h2,
-h3 {
-  font-family: var(--font-main);
-  font-weight: 500;
-  line-height: 1.1;
+h1, h2, h3 { 
+    font-family: var(--font-main); 
+    font-weight: 500; 
+    line-height: 1.1; 
 }
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-iframe {
-  border: 0;
-  width: 100%;
-}
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+iframe { border: 0; width: 100%; }
 
 /* Utility Classes */
-.section-title,
+.section-title, 
 section h2 {
   font-size: 3.5rem;
   text-align: center;
@@ -176,7 +101,7 @@ section h2 {
   z-index: 1000;
   transition: transform var(--transition-normal);
   padding: 1rem 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .header.header-hidden {
@@ -192,8 +117,7 @@ section h2 {
 }
 
 .navbar img {
-  width: 80px;
-  /* Dimensione controllata logo */
+  width: 80px; /* Dimensione controllata logo */
 }
 
 .nav-menu {
@@ -220,13 +144,8 @@ section h2 {
   transition: width var(--transition-normal);
 }
 
-.nav-link:hover {
-  color: var(--color-primary);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
+.nav-link:hover { color: var(--color-primary); }
+.nav-link:hover::after { width: 100%; }
 
 /* Hamburger Menu Icon */
 .hamburger {
@@ -247,67 +166,52 @@ section h2 {
    4. UI COMPONENTS: BUTTONS
    ======================================================== */
 /* STILE AGGIORNATO PER PULSANTI PRINCIPALI: Colore pieno e ombra pulita */
-button,
-.btn {
+button, .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding: 12px 24px;
-  font-family: var(--font-main);
-  /* Anton per l'impatto */
+  font-family: var(--font-main); /* Anton per l'impatto */
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-
+  
   /* NUOVI STILI */
-  background-color: var(--color-primary);
-  /* Sfondo primario */
-  color: var(--color-bg-dark);
-  /* Testo scuro per contrasto massimo */
-  border: none;
-  /* Rimuovi il bordo doppio */
+  background-color: var(--color-primary); /* Sfondo primario */
+  color: var(--color-bg-dark); /* Testo scuro per contrasto massimo */
+  border: none; /* Rimuovi il bordo doppio */
   border-radius: 4px;
-  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.4);
-  /* Ombra con bagliore */
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.4); /* Ombra con bagliore */
   cursor: pointer;
   transition: all var(--transition-fast);
   text-align: center;
 }
 
-a button {
-  pointer-events: none;
-}
+a button { pointer-events: none; } 
 
-button:hover,
-.btn:hover {
+button:hover, .btn:hover {
   transform: translateY(-2px);
   background-color: var(--color-primary);
-  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.6);
-  /* Più bagliore all'hover */
+  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.6); /* Più bagliore all'hover */
   color: var(--color-bg-dark);
 }
 
-button:active,
-.btn:active {
+button:active, .btn:active {
   transform: translateY(1px);
-  background-color: var(--color-primary-dark);
-  /* Verde scuro al click */
+  background-color: var(--color-primary-dark); /* Verde scuro al click */
   box-shadow: 0 2px 10px rgba(0, 255, 0, 0.3);
-  color: var(--color-text-white);
-  /* Testo bianco su dark primary */
+  color: var(--color-text-white); /* Testo bianco su dark primary */
 }
 
 /* Stili per l'icona SVG all'interno del pulsante */
 .btn svg {
-  color: var(--color-bg-dark);
-  /* Icona scura su sfondo verde */
+  color: var(--color-bg-dark); /* Icona scura su sfondo verde */
   transition: inherit;
 }
 
 .btn:active svg {
-  color: var(--color-text-white);
-  /* Icona bianca su sfondo scuro */
+  color: var(--color-text-white); /* Icona bianca su sfondo scuro */
 }
 
 /* ========================================================
@@ -321,9 +225,8 @@ button:active,
   gap: 2rem;
   padding: 2rem;
   width: 100%;
-  height: 60vh;
-  /* Aumentato leggermente per respiro */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imgs/banner sito.webp') center/cover no-repeat;
+  height: 60vh; /* Aumentato leggermente per respiro */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imgs/banner sito.webp') center/cover no-repeat;
   text-align: center;
 }
 
@@ -341,12 +244,11 @@ button:active,
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  /* Fondamentale per responsive */
+  flex-wrap: wrap; /* Fondamentale per responsive */
   gap: 3rem;
   padding: 4rem 2rem;
   margin-top: 3rem;
-  background: linear-gradient(rgba(34, 34, 34, 0.9), rgba(34, 34, 34, 0.9)), url('imgs/catalogoLandscape.webp') center/cover no-repeat;
+  background: linear-gradient(rgba(34,34,34,0.9), rgba(34,34,34,0.9)), url('imgs/catalogoLandscape.webp') center/cover no-repeat;
   color: var(--color-text-white);
 }
 
@@ -371,7 +273,7 @@ button:active,
 .catalogoImage img {
   border-radius: var(--border-radius);
   border: 3px solid #000;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
   transition: transform var(--transition-normal);
 }
 
@@ -468,14 +370,13 @@ button:active,
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* Spinge l'immagine in basso */
+  justify-content: space-between; /* Spinge l'immagine in basso */
   transition: transform var(--transition-normal);
 }
 
 .service:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .service h3 {
@@ -516,21 +417,19 @@ button:active,
   color: #666;
   max-width: 600px;
   margin: 0 auto;
-  font-family: var(--font-body);
-  /* Assicura font leggibile qui */
+  font-family: var(--font-body); /* Assicura font leggibile qui */
 }
 
 .visit-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
-  /* Grid unita */
+  gap: 0; /* Grid unita */
   max-width: 1200px;
   margin: 0 auto;
   background-color: var(--color-bg-card);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 .info-column {
@@ -545,12 +444,10 @@ button:active,
   gap: 2rem;
   align-items: flex-start;
   padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.contact-row:last-of-type {
-  border-bottom: none;
-}
+.contact-row:last-of-type { border-bottom: none; }
 
 .icon-box {
   width: 40px;
@@ -573,32 +470,23 @@ button:active,
 .text-content p {
   color: var(--color-text-light);
   font-size: 1.5rem;
-  font-family: var(--font-body);
-  /* Assicura font leggibile qui */
+  font-family: var(--font-body); /* Assicura font leggibile qui */
 }
 
 /* STILI PER RENDERE I LINK DEI CONTATTI EVIDENTI (NUOVO) */
 .text-content a:not(.btn-navigate) {
-  color: var(--color-primary);
-  /* Colore primario per spiccare */
-  font-size: 1.6rem;
-  /* Leggermente più grande per leggibilità */
-  text-decoration: none;
-  /* Rimuove sottolineatura di base */
-  transition: color var(--transition-fast), text-shadow var(--transition-fast);
-  font-family: var(--font-body);
-  /* Assicura font leggibile qui */
-  font-weight: 700;
-  /* Bolder for prominence */
+    color: var(--color-primary); /* Colore primario per spiccare */
+    font-size: 1.6rem; /* Leggermente più grande per leggibilità */
+    text-decoration: none; /* Rimuove sottolineatura di base */
+    transition: color var(--transition-fast), text-shadow var(--transition-fast);
+    font-family: var(--font-body); /* Assicura font leggibile qui */
+    font-weight: 700; /* Bolder for prominence */
 }
 
 .text-content a:not(.btn-navigate):hover {
-  color: var(--color-text-white);
-  /* Diventa bianco brillante */
-  text-shadow: 0 0 5px var(--color-primary);
-  /* Aggiunge un effetto neon/glow */
-  text-decoration: underline;
-  /* Ritorna la sottolineatura all'hover */
+    color: var(--color-text-white); /* Diventa bianco brillante */
+    text-shadow: 0 0 5px var(--color-primary); /* Aggiunge un effetto neon/glow */
+    text-decoration: underline; /* Ritorna la sottolineatura all'hover */
 }
 
 
@@ -612,10 +500,9 @@ button:active,
 }
 
 .btn-navigate:hover {
-  transform: translateX(5px);
-  /* Sposta a destra all'hover per indicare azione */
-  color: var(--color-text-white) !important;
-  text-shadow: 0 0 5px var(--color-primary);
+    transform: translateX(5px); /* Sposta a destra all'hover per indicare azione */
+    color: var(--color-text-white) !important;
+    text-shadow: 0 0 5px var(--color-primary); 
 }
 
 
@@ -629,8 +516,8 @@ button:active,
 }
 
 .social-icons {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .social-icons img {
@@ -639,9 +526,7 @@ button:active,
   transition: transform 0.2s;
 }
 
-.social-icons img:hover {
-  transform: scale(1.1);
-}
+.social-icons img:hover { transform: scale(1.1); }
 
 .map-column {
   min-height: 400px;
@@ -678,7 +563,7 @@ button:active,
   background: var(--color-bg-card);
   padding: 3rem;
   border-radius: var(--border-radius);
-  border: 1px solid rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0,255,0,0.1);
 }
 
 /* Alternate Text/Image layout */
@@ -700,8 +585,7 @@ button:active,
 .about-text p {
   font-size: 1.6rem;
   text-align: justify;
-  font-family: var(--font-body);
-  /* Usa Inter */
+  font-family: var(--font-body); /* Usa Inter */
 }
 
 .about-img {
@@ -711,7 +595,7 @@ button:active,
 
 .about-img img {
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   margin-bottom: 1rem;
 }
 
@@ -719,8 +603,7 @@ button:active,
   font-size: 1.2rem;
   color: var(--color-text-muted);
   font-style: italic;
-  font-family: var(--font-body);
-  /* Usa Inter */
+  font-family: var(--font-body); /* Usa Inter */
 }
 
 /* ========================================================
@@ -729,8 +612,7 @@ button:active,
 #catalogoBody main {
   padding: 2rem 0;
   min-height: 60vh;
-  flex-grow: 1;
-  /* Garantisce che il main si espanda in questo contesto */
+  flex-grow: 1; /* Garantisce che il main si espanda in questo contesto */
 }
 
 #catalogoBody iframe {
@@ -741,32 +623,29 @@ button:active,
 }
 
 .mobile {
-  display: none;
-  /* Nascosto su desktop */
+  display: none; /* Nascosto su desktop */
   text-align: center;
   padding: 2rem;
   color: var(--color-text-main);
 }
 
 .mobile h1 {
-  font-size: 3.5rem;
-  color: var(--color-text-main);
-  margin-bottom: 1rem;
+    font-size: 3.5rem;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
 }
 
 .mobile p {
-  color: var(--color-text-muted);
-  margin-bottom: 2rem;
-  font-family: var(--font-body);
-  /* Usa Inter */
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    font-family: var(--font-body); /* Usa Inter */
 }
 
 .mobile img {
   margin: 2rem auto;
   border-radius: var(--border-radius);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  /* Limita dimensione anteprima su mobile */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  max-width: 400px; /* Limita dimensione anteprima su mobile */
 }
 
 /* ========================================================
@@ -777,54 +656,40 @@ footer {
   color: var(--color-text-light);
   text-align: center;
   padding: 3rem 1rem;
-  font-family: var(--font-body);
-  /* Usa Inter */
+  font-family: var(--font-body); /* Usa Inter */
 }
 
 /* ========================================================
    13. MEDIA QUERIES (Mobile Responsiveness)
    ======================================================== */
 @media screen and (max-width: 900px) {
-
   /* Visit Us Stacked */
   .visit-grid {
     grid-template-columns: 1fr;
   }
-
   .map-column {
     height: 300px;
-    order: -1;
-    /* Mappa sopra su tablet/mobile */
+    order: -1; /* Mappa sopra su tablet/mobile */
   }
 }
 
 @media screen and (max-width: 768px) {
-
   /* Navigation */
   .hamburger {
     display: block;
     z-index: 1001;
   }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
+  
+  .hamburger.active .bar:nth-child(2) { opacity: 0; }
+  .hamburger.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .hamburger.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
   .nav-menu {
     position: fixed;
     left: -100%;
     top: 0;
     flex-direction: column;
-    background-color: rgba(34, 34, 34, 0.98);
-    /* Quasi opaco */
+    background-color: rgba(34, 34, 34, 0.98); /* Quasi opaco */
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -838,9 +703,7 @@ footer {
   }
 
   /* Hero */
-  .hero h1 {
-    font-size: 2.8rem;
-  }
+  .hero h1 { font-size: 2.8rem; }
 
   /* Catalogo Index */
   .catalogo {
@@ -849,57 +712,36 @@ footer {
   }
 
   /* About Page */
-  .about-section,
+  .about-section, 
   .about-section:nth-child(even) {
     flex-direction: column;
     padding: 2rem;
   }
-
-  .about-text p {
-    text-align: left;
-  }
+  
+  .about-text p { text-align: left; }
 
   /* Catalogo Page PDF Handling */
-  #catalogoBody iframe {
-    display: none;
-  }
-
-  /* Nascondi PDF viewer */
-  .mobile {
-    display: block;
-  }
-
-  /* Mostra versione mobile */
+  #catalogoBody iframe { display: none; } /* Nascondi PDF viewer */
+  .mobile { display: block; } /* Mostra versione mobile */
 }
 
 @media screen and (max-width: 480px) {
-  html {
-    font-size: 55%;
+  html { font-size: 55%; } /* Scala font leggermente giù */
+  
+  .header { padding: 1rem; }
+  
+  .section-title, 
+  section h2, 
+  #h1ChiSiamo { 
+    font-size: 2.8rem; 
   }
 
-  /* Scala font leggermente giù */
-
-  .header {
-    padding: 1rem;
-  }
-
-  .section-title,
-  section h2,
-  #h1ChiSiamo {
-    font-size: 2.8rem;
-  }
-
-  .reason-number {
-    font-size: 5rem;
-  }
-
-  .info-column {
-    padding: 2rem;
-  }
-
+  .reason-number { font-size: 5rem; }
+  
+  .info-column { padding: 2rem; }
+  
   /* Adatta il blocco mobile */
   .mobile img {
-    max-width: 100%;
-    /* Occupare tutto lo spazio disponibile */
+      max-width: 100%; /* Occupare tutto lo spazio disponibile */
   }
 }
